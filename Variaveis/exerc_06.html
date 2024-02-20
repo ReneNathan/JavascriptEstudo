@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Isso é um título</h1>
+
+    <script>
+      let num1 = parseFloat(prompt("Digite um número"));
+      let contador = 0;
+
+      while (contador <= 1000) {
+        document.write(num1 * contador);
+        document.write("<br>");
+
+        if ((num1 * contador) % 10 == 0) {
+          document.write("<hr>");
+        }
+
+        contador++;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <h1>Isso é um título</h1>
+
+    <script>
+      let nome = prompt("Qual seu nome?");
+      let num1 = prompt("Digite o primeiro número:");
+      let num2 = prompt("Digite o segundo número:");
+      alert("olá " + nome + "!");
+
+      let numSoma = parseFloat(num1) + parseFloat(num2);
+      let numSub = num1 - num2;
+      let numMult = num1 * num2;
+      let numDiv = num1 / num2;
+      let numRest = num1 % num2;
+
+      alert(
+        "Soma:" +
+          numSoma +
+          "/" +
+          "Subtração:" +
+          numSub +
+          "/" +
+          "Multiplicação:" +
+          numMult +
+          "/" +
+          "Divisão:" +
+          numDiv +
+          "/" +
+          "Resto da divisão:" +
+          numRest
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

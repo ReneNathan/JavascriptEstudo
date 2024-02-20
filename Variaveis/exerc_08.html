@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Isso é um título</h1>
+
+    <script>
+      let dado1 = parseInt(Math.random() * 6 + 1);
+      let dado2 = parseInt(Math.random() * 6 + 1);
+      let contador = 0;
+
+      let dezPar = 0;
+
+      while (dezPar < 10) {
+        contador++;
+
+        document.write("Dado 1:" + dado1);
+        document.write("<br>");
+        document.write("Dado 2:" + dado2);
+        document.write("<hr>");
+
+        if ((dado1 + dado2) % 2 == 0) {
+          dezPar++;
+          if (dezPar == 10) {
+            break;
+          }
+        }
+
+        dado1 = parseInt(Math.random() * 6 + 1);
+        dado2 = parseInt(Math.random() * 6 + 1);
+      }
+
+      document.write(
+        "Foram necessárias " +
+          contador +
+          " roladas para que a soma do valor dos dados desse par 10 vezes"
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Isso é um título</h1>
+
+    <script>
+      let dado1 = parseInt(Math.random() * 6 + 1); // Math.random() * max + min
+      let dado2 = parseInt(Math.random() * 6 + 1);
+      let contador = parseInt(Math.random() * 6 + 1);
+
+      while (dado1 !== dado2) {
+        contador++;
+        dado1 = parseInt(Math.random() * 6 + 1);
+        dado2 = parseInt(Math.random() * 6 + 1);
+      }
+
+      document.write("Foram necessárias " + contador + " roladas");
+    </script>
+  </body>
+</html>
