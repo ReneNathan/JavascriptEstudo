@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Listas ;</h1>
+
+    <ul id="lista"></ul>
+
+    <script>
+      let pessoa1 = { nome: "Maria", email: "maria@yahho.com" };
+      let pessoa2 = { nome: "Carlos", email: "carlos@yahho.com" };
+      let pessoa3 = { nome: "Luis, o Espalha lixo", email: "lixoso@yahho.com" };
+      let pessoa4 = { nome: "Amanda", email: "amanda@yahho.com" };
+      let pessoa5 = { nome: "Roberta", email: "robert@yahho.com" };
+
+      let pessoas = [pessoa1, pessoa2, pessoa3, pessoa4, pessoa5];
+      let lista = document.getElementById("lista");
+
+      for (let i = 0; i < pessoas.length; i++) {
+        lista.innerHTML +=
+          "<li>" +
+          pessoas[i].nome +
+          " tem o email " +
+          pessoas[i].email +
+          "</li>";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Introdução/exerc_17.css" />
+  </head>
+  <body>
+    <h1>Veja sua nota!!!</h1>
+    <h2>Nome do aluno: <span id="nome">namePlaceholder</span></h2>
+    <br />
+    <div class="divNotas">
+      Notas
+      <ul id="listaNotas"></ul>
+    </div>
+
+    <h2>Média: <span id="media">mediaPlaceholder</span></h2>
+    <h2>Status: <span id="status">statusPlaceholder</span></h2>
+
+    <script>
+      let aluno = { nome: "Luiz, o Espalha Lixo", notas: [4, 2, 9, 4] };
+
+      let nome = document.getElementById("nome");
+      nome.innerHTML = aluno.nome;
+
+      let listaNotas = document.getElementById("listaNotas");
+
+      let media = 0;
+
+      for (let i = 0; i < aluno.notas.length; i++) {
+        listaNotas.innerHTML += "<li>" + aluno.notas[i] + "</li>";
+        media += aluno.notas[i];
+      }
+
+      media /= aluno.notas.length;
+
+      let mediatxt = document.getElementById("media");
+
+      let status = document.getElementById("status");
+
+      mediatxt.innerHTML = media;
+
+      if (parseFloat(media) < 7) {
+        status.innerHTML = "Reprovado";
+      } else {
+        status.innerHTML = "Aprovado";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Introdução/exerc_16.css" />
+  </head>
+  <body>
+    <h1>Inserindo valor em uma tabela usando JS</h1>
+    <table id="tabela">
+      <tr>
+        <th>Produto</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+      </tr>
+    </table>
+
+    <script>
+      let obj1 = { nome: "Lápis", preco: "0,98R$", qtd: "1020" };
+
+      let obj2 = { nome: "Caneta", preco: "1,27R$", qtd: "734" };
+
+      let obj3 = { nome: "Borracha", preco: "1,94R$", qtd: "1827" };
+
+      let obj4 = { nome: "Tesoura", preco: "4,45R$", qtd: "368" };
+
+      let objetos = [obj1, obj2, obj3, obj4];
+
+      let tabela = document.getElementById("tabela");
+
+      for (let i = 0; i < objetos.length; i++) {
+        tabela.innerHTML +=
+          "<td>" +
+          objetos[i].nome +
+          "</td>" +
+          "<td>" +
+          objetos[i].preco +
+          "</td>" +
+          "<td>" +
+          objetos[i].qtd +
+          "</td>";
+      }
+    </script>
+  </body>
+</html>
