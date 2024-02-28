@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>As médias</title>
+  </head>
+  <body>
+    <ul id="alunosList"></ul>
+    <script>
+      let alunos = [
+        {
+          nome: "Rene",
+          notas: [1, 3, 3, 8],
+        },
+        {
+          nome: "Luiz, o Espalha Lixo",
+          notas: [10, 6, 3, 2],
+        },
+      ];
+
+      let medias = document.getElementById("alunosList");
+
+      for (let i = 0; i < alunos.length; i++) {
+        let media = 0;
+        for (let j = 0; j < alunos[i].notas.length; j++) {
+          media += alunos[i].notas[j];
+        }
+        media /= alunos[i].notas.length;
+
+        medias.innerHTML +=
+          "<li>" + alunos[i].nome + " tem média de " + media + "</li>";
+      }
+    </script>
+  </body>
+</html>
