@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostra até 100 com btn</title>
+  </head>
+  <body>
+    <button onclick="mostra100()">Iniciar</button>
+    <ul id="list"></ul>
+
+    <script>
+      let i = 0;
+      function mostra100() {
+        for (i; i <= 9999; i++) {
+          document.getElementById("list").innerHTML += "<li>" + i + "</li>";
+        }
+      }
+    </script>
+  </body>
+</html>

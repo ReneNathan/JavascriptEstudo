@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="num" type="text" />
+    <button onclick="tabuadaCalcula()">Gerar Tabuada</button>
+    <p id="tabuada"></p>
+
+    <script>
+      function tabuadaCalcula() {
+        document.getElementById("tabuada").innerHTML = "";
+        let num = parseFloat(document.getElementById("num").value);
+        let nums = [num - 3, num - 2, num - 1, num, num + 1, num + 2, num + 3];
+        for (let i = 0; i <= 100; i++) {
+          let mult = 0;
+          mult = num * i;
+
+          document.getElementById("tabuada").innerHTML +=
+            num + " X " + i + " = " + mult + "</br>";
+        }
+      }
+    </script>
+  </body>
+</html>
