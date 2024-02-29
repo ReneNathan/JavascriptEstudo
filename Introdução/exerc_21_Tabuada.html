@@ -8,6 +8,7 @@
   <body>
     <input id="num" type="text" />
     <button onclick="tabuadaCalcula()">Gerar Tabuada</button>
+    <button onclick="limpar()">Limpar</button>
     <p id="tabuada"></p>
 
     <script>
@@ -22,6 +23,10 @@
           document.getElementById("tabuada").innerHTML +=
             num + " X " + i + " = " + mult + "</br>";
         }
+      }
+
+      function limpar() {
+        document.getElementById("tabuada").innerHTML = "";
       }
     </script>
   </body>

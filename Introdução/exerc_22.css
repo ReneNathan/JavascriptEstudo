@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+label {
+  width: 65px;
+}
+
+.results {
+  background-color: rgba(128, 128, 128, 0.548);
+}

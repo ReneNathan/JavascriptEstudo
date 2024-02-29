@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./exerc_22.css" />
+  </head>
+  <body>
+    <h2>Descubra a área de um triangulo retangulo</h2>
+    <div class="row">
+      <label>Base:</label>
+      <input id="base" type="number" />
+    </div>
+    <div class="row">
+      <label>Altura</label>
+      <input id="altura" type="number" />
+    </div>
+    <div class="row">
+      <button onclick="areatriangulo()">Calcular</button>
+    </div>
+    <div class="row">
+      <label>Área:</label>
+      <input id="result" class="results" type="number" readonly />
+    </div>
+
+    <script>
+      function areatriangulo() {
+        let baseValor = document.getElementById("base").value;
+        let alturaValor = document.getElementById("altura").value;
+        let area = (baseValor * alturaValor) / 2;
+
+        document.getElementById("result").value = area;
+      }
+    </script>
+  </body>
+</html>
