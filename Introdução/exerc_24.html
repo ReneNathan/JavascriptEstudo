@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Somar</title>
+  </head>
+  <body>
+    <label>1º número</label>
+    <input id="num1" type="number" />
+    <br />+<br />
+    <label>2º número</label>
+    <input id="num2" type="number" />
+    <br />
+    <br />
+    <button onclick="result()">Somar</button>
+    <br />
+    <label>Soma: </label>
+    <input id="result" type="number" readonly />
+
+    <script>
+      function somar(num1, num2) {
+        let valorSoamdo = parseFloat(num1) + parseFloat(num2);
+        return valorSoamdo;
+      }
+
+      function result() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+
+        let resultsoma = somar(num1, num2);
+
+        document.getElementById("result").value = resultsoma;
+      }
+    </script>
+  </body>
+</html>

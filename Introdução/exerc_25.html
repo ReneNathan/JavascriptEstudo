@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <label>1º número</label>
+    <input id="num1" type="number" />
+    <br />
+    <br />
+    <select name="conta" id="conta">
+      <option value="soma">+</option>
+      <option value="sub">-</option>
+      <option value="mult">X</option>
+      <option value="div">/</option>
+    </select>
+    <br />
+    <br />
+    <label>2º número</label>
+    <input id="num2" type="number" />
+    <br />
+    <br />
+    <button onclick="result()">Calcular</button>
+    <br />
+    <br />
+    <input id="result" type="number" readonly />
+
+    <script>
+      function calcular(tipo, num1, num2) {
+        alert(tipo);
+        if (tipo == "soma") {
+          return num1 + num2;
+        } else if (tipo == "sub") {
+          return num1 - num2;
+        } else if (tipo == "mult") {
+          return num1 * num2;
+        } else {
+          if (num2 != 0) {
+            return num1 / num2;
+          } else {
+            return NaN;
+          }
+        }
+      }
+
+      function result() {
+        let operacao = document.getElementById("conta").value;
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+
+        document.getElementById("result").value = calcular(
+          operacao,
+          num1,
+          num2
+        );
+      }
+    </script>
+  </body>
+</html>

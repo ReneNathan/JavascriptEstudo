@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./exerc_22.css" />
+  </head>
+  <body>
+    <h2>Descubra a área de um circulo</h2>
+    <div class="row">
+      <label>Raio:</label>
+      <input id="raio" type="number" />
+    </div>
+    <div class="row">
+      <label>PI</label>
+      <input id="pi" type="number" />
+    </div>
+    <div class="row">
+      <button onclick="areacirculo()">Calcular</button>
+    </div>
+    <div class="row">
+      <label>Área:</label>
+      <input id="result" class="results" type="number" readonly />
+    </div>
+
+    <script>
+      document.getElementById("pi").value = Math.PI;
+
+      function areacirculo() {
+        let raio = document.getElementById("raio").value;
+
+        let pi = Math.PI;
+
+        let area = pi * raio ** 2;
+
+        document.getElementById("result").value = area;
+      }
+    </script>
+  </body>
+</html>
