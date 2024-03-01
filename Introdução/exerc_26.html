@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    function media() {
+      let result = 0;
+      let invalid = false;
+
+      for (let i = 0; i < arguments.length; i++) {
+        if (typeof arguments[i] != "number") {
+          console.log("Você inseriu um valor invalido");
+          invalid = true;
+          break;
+        } else {
+          if (arguments.length == 0) {
+            return 0;
+            break;
+          } else {
+            result += arguments[i];
+          }
+        }
+      }
+
+      if (typeof result == NaN) {
+        result = 0;
+      } else {
+        result /= arguments.length;
+      }
+
+      if (invalid != true) {
+        console.log("Média: " + result);
+      }
+    }
+
+    media();
+  </script>
+</html>
