@@ -9,7 +9,8 @@ var soma = arr.reduce(function (total, valor) {
 
 console.log(soma) */
 
-let arrayUnico = [];
+let arrayUnico = [arr[0]];
+
 
 var arrUnico = arr.reduce(function (acumulador, atual) {
 
