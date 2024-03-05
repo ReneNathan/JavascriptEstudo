@@ -21,6 +21,16 @@
       .underlined {
         border-bottom: 3px solid currentColor;
       }
+
+      .reprovado {
+        background-color: rgb(243, 159, 159);
+        color: red;
+      }
+
+      .aprovado {
+        background-color: rgb(195, 226, 148);
+        background-color: green;
+      }
     </style>
   </head>
 
@@ -45,6 +55,8 @@
             <th>Nota 2</th>
             <th>Nota 3</th>
             <th>Nota 4</th>
+            <th>Média</th>
+            <th>Status</th>
           </tr>
         </thead>
 
@@ -69,17 +81,43 @@
         { nome: "Sergio", notas: [4.5, 9.5, 10, 2] },
       ];
 
+      function aprovado(media) {
+        if (media >= 6) {
+          return "Aprovado";
+        } else {
+          return "Reprovado";
+        }
+      }
+
+      function classAdd(media) {
+        if (media >= 6) {
+          return "class = 'aprovado'";
+        } else {
+          return "class = 'reprovado'";
+        }
+      }
+
       const html = alunos
         .map(
           (aluno) => `
-          <tr>
-            <th>${aluno.nome}</th>
-            <th>${aluno.notas[0]}</th>
-            <th>${aluno.notas[1]}</th>
-            <th>${aluno.notas[2]}</th>
-            <th>${aluno.notas[3]}</th>
-          </tr>
-      `
+                      <tr>
+                        <th>${aluno.nome}</th>
+                        <th>${aluno.notas[0]}</th>
+                        <th>${aluno.notas[1]}</th>
+                        <th>${aluno.notas[2]}</th>
+                        <th>${aluno.notas[3]}</th>
+                        <th>${
+                          aluno.notas.reduce((a, b) => a + b, 0) /
+                          aluno.notas.length
+                        }</th>
+                        <th ${classAdd(
+                          aluno.notas.reduce((a, b) => a + b, 0) /
+                            aluno.notas.length
+                        )}>${aprovado(
+            aluno.notas.reduce((a, b) => a + b, 0) / aluno.notas.length
+          )}</th>
+                      </tr>
+                  `
         )
         .join("");
 
