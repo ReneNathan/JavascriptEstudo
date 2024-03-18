@@ -3,9 +3,9 @@ function changeColor() {
   document.getElementById("green").innerHTML = "green: ";
   document.getElementById("blue").innerHTML = "blue: ";
 
-  let red = 255;
-  let green = 150;
-  let blue = 0;
+  let red = Math.random() * 255;
+  let green = Math.random() * 255;
+  let blue = Math.random() * 255;
 
   document.getElementById("body").style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
 
